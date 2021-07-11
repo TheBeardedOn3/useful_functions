@@ -13,22 +13,28 @@
 #include <algorithm>
 #include <vector>
 
-
 class UsefulTemplates
 {
 
 public:
-    UsefulTemplates(){};
-    /*************** MATH *******************/
+  UsefulTemplates(){};
+  /*************** MATH *******************/
 
-    /*************** Vector *******************/
+  /*************** Vector *******************/
 
-    /** brief */
-    template <typename T>
-    static bool contains_element(const std::vector<T>& _vec, T _element)
-    {
+  /** brief */
+  template <typename T>
+  static bool contains_element(const std::vector<T> &_vec, T _element)
+  {
     return std::find(_vec.begin(), _vec.end(), _element) != _vec.end();
-    }
+  }
+
+  /** brief */
+  template <typename T, typename U>
+  static std::vector<U> recast_vector(const std::vector<T> &_vec)
+  {
+    return std::vector<U>(_vec.begin(), _vec.end());
+  }
 };
 
 #endif
