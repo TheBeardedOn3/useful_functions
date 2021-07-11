@@ -47,6 +47,11 @@ target_link_libraries(test_vec
   useful_lib 
 )
 
+add_executable(test_math src/test/test_math.cpp)
+target_link_libraries(test_math
+  useful_lib 
+)
+
 #########################
 #########INSTALL#########
 #########################
